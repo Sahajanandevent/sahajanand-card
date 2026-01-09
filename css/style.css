@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(45deg, #ff416c, #ff4b2b);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f0c29;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card Container & Animated Border */
+.card-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+    padding: 2px; /* For the animated border thickness */
+}
+
+.animated-border {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, transparent, transparent, #ff416c, #ff4b2b);
+    animation: rotateBorder 4s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotateBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.card-content {
+    position: relative;
+    background: #1a1a2e;
+    border-radius: 18px;
+    padding: 30px 20px;
+    z-index: 1;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Logo Animation */
+.logo-area {
+    margin-bottom: 20px;
+}
+
+
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 65, 108, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 65, 108, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 65, 108, 0); }
+}
+
+.firm-name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-call { background: #3498db; }
+.btn-whatsapp { background: #25d366; }
+
+.btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* Services */
+.services-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ff4b2b;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.service-item {
+    background: rgba(255,255,255,0.05);
+    padding: 10px 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-item i {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #ff416c;
+}
+
+.service-item span {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.service-item:hover {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.05);
+}
+
+/* Contact & Social */
+.contact-info a {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.contact-info a:hover { color: #fff; }
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-icon:hover {
+    transform: rotate(360deg) scale(1.2);
+    border-color: #ff4b2b;
+}
+
+/* Mobile Responsive */
+@media (max-width: 375px) {
+    .firm-name { font-size: 18px; }
+    .action-buttons { flex-direction: column; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+    --gold: #f1c40f;
+    --accent: #ff4b2b;
+    --glass: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000428; 
+    background: linear-gradient(to bottom, #004e92, #000428);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* The Animated Card Outer */
+.card-container {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+/* Border Animation Effect */
+.animated-border {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, transparent, transparent, #00d2ff, #3a7bd5);
+    animation: rotate 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.card-content {
+    background: #0a0a0a;
+    margin: 3px; /* Gap for the animated border */
+    border-radius: 22px;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Logo Styling */
+.logo-wrapper {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.main-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Text Section */
+.firm-name {
+    font-size: 1.2rem;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.owner-box {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.owner-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.designation {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00d2ff;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-call { background: #2980b9; }
+.btn-whatsapp { background: #27ae60; }
+
+.btn:hover { transform: scale(1.05); }
+
+/* Services */
+.section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px 5px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.service-card i {
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.service-card span { font-size: 0.65rem; font-weight: 500; }
+
+/* Contact Links */
+.contact-links {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-item i { width: 25px; color: #00d2ff; }
+
+/* Social Icons */
+.social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.4s ease;
+}
+
+.social-icon:hover {
+    background: var(--gold);
+    color: #000;
+    transform: translateY(-5px) rotate(360deg);
+}
